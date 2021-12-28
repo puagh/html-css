@@ -1,0 +1,161 @@
+:root{
+  --white30: #FFF;
+  --white20: #A5A3A5;
+  --black30: #251F24;
+  --black20: #3A3539;
+
+}
+
+body{
+  color: var(--white30);
+  font-family: 'Nunito', sans-serif;
+  background: var(--black30);
+  margin: 0;
+}
+
+a{
+  color: var(--white30);
+}
+
+.header{
+  position: sticky;
+  inset-block-start: -45px;
+}
+
+.header-content{
+  position: relative;
+  inset-block-start: 70px;
+}
+
+header{
+  font-size: 14px;
+  position: absolute;
+  inset-block-start: 0;
+  inline-size: 306px;
+  inset-inline-start: -306px;
+}
+
+header li{
+  color: var(--white20);
+  margin-block-end: 16px;
+}
+
+header a{
+  color: var(--white20);
+  text-decoration: none;
+}
+
+header a:hover{
+  color: var(--white30);
+}
+
+nav details summary{
+  font-weight: bold;
+  color: var(--white30);
+}
+
+h1{
+  font-size: 60px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
+}
+
+hr{
+  margin-block: 40px;
+  border: 1px solid rgba(97, 97, 97, 0.2);
+}
+
+h2{
+  font-size: 2em;
+  margin-block: 40px;
+}
+
+h1, h2{
+  font-weight: 700;
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+p{
+  color: var(--white20);
+}
+
+.wrapper{
+  max-inline-size: 636px; /*width*/
+  margin: auto;
+}
+
+.main-content{
+  padding-inline: 16px;
+}
+
+.section-content{
+  counter-reset: titleList;
+}
+
+.main hr{
+  display: none;
+}
+
+.section-content h3{
+  counter-increment: titleList;
+}
+
+.section-content h3::before{
+  content: counter(titleList, decimal)". ";
+}
+
+/* .section-content h3::after{
+  content: '';
+  width: 32px;
+  height: 4px;
+  background: var(--white30);
+  display: inline-block;
+} */
+
+.section-content img{
+  margin-block-start: 40px;
+  display: block;
+  max-inline-size: 100%;
+}
+
+.section-content ol, .section-content ul{
+  color: var(--white20);
+}
+
+pre{
+  background: var(--black20);
+  border-radius: 8px;
+  padding: 40px;
+  overflow: auto;
+}
+
+.hero{
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  height: 350px;
+}
+
+blockquote{
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  margin-inline: 0;
+  background: var(--black20);
+  border-radius: 8px;
+  padding: 24px;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+blockquote p{
+  color: var(--white30)
+}
+
+blockquote p span::before{
+  content: '- ';
+}
+
+
